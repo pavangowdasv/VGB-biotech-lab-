@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Newsreader', 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Newsreader', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --color-canvas: #FAF8F3;
+    --color-dark: #19271E;
+    --color-primary-green: #445E2F;
+    --color-sage: #8A9E78;
+    --color-warm-gray: #EEEDE9;
+    --color-text-body: #3E4E42;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #19271E;
+    background-color: #FAF8F3;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Botanical & Natural Grain Textures */
+.bg-grain {
+  background-image: radial-gradient(rgba(11, 32, 26, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-grain-dark {
+  background-image: radial-gradient(rgba(253, 251, 247, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Natural Glass effects */
+.botanical-glass-dark {
+  background: rgba(11, 32, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(163, 177, 138, 0.2);
+}
+
+.botanical-glass-light {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(46, 90, 62, 0.12);
+}
+
+.natural-card-light {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(11, 32, 26, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(11, 32, 26, 0.05);
+}
+
+.natural-card-dark {
+  background-color: #0B201A;
+  border: 1px solid rgba(163, 177, 138, 0.2);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom sleek scrollbar with natural tones */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EEEDE9;
+}
+::-webkit-scrollbar-thumb {
+  background: #A3B18A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E5A3E;
+}
+
+/* Natural Glow */
+.glow-botanical {
+  box-shadow: 0 0 50px -10px rgba(163, 177, 138, 0.2);
+}
+
+/* Parallax leaf floating animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-1.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 10s ease-in-out infinite;
+}
